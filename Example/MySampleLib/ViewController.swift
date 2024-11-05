@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MySampleLib
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @objc func buttonTapped() {
+           let alertController = MySampleLib.createAlert(title: "Hello",
+                                                    message: "Publishing library in iOS is fun!!",
+                                                    alertStyle: .alert,
+                                                    color: .gray)
+           
+           present(alertController, animated: true)
+       }
 
 }
 
